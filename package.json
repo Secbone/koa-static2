@@ -1,0 +1,32 @@
+{
+  "name": "koa-static2",
+  "version": "0.1.0",
+  "description": "Middleware for Koa2 to serve a folder under a name declared by user with Babel",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Secbone/koa-static2.git"
+  },
+  "keywords": [
+    "koa",
+    "middleware",
+    "static",
+    "serve",
+    "send"
+  ],
+  "author": "Secbone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Secbone/koa-static2/issues"
+  },
+  "homepage": "https://github.com/Secbone/koa-static2#readme",
+  "dependencies": {
+    "koa-send": "^3.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  }
+}
