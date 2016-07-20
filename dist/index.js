@@ -1,9 +1,5 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
 var _regenerator = require("babel-runtime/regenerator");
 
 var _regenerator2 = _interopRequireDefault(_regenerator);
@@ -67,4 +63,4 @@ function serve(path, root) {
     }();
 }
 
-exports.default = serve;
+module.exports = serve;

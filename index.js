@@ -15,4 +15,4 @@ function serve(path, root) {
     }
 }
 
-export default serve;
+module.exports = serve;

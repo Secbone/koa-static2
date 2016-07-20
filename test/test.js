@@ -1,9 +1,9 @@
 "use strict"
 
-const assert = require("assert");
-const serve = require("../dist/index.js").default;
-const Koa = require("koa");
-const request = require("supertest");
+import assert from "assert";
+import serve from "../dist/index.js";
+import Koa from "koa";
+import request from "supertest";
 
 describe("Koa-static2", () => {
     const app = new Koa();
