@@ -4,7 +4,7 @@
 [![Build Status][travis-image]][travis-url]
 [![Downloads][downloads-image]][downloads-url]
 
-Middleware for Koa2 to serve a folder under a name declared by user with Babel
+Middleware for Koa2 to serve a folder under a name declared by user
 
 ## Install
 
