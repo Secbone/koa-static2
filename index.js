@@ -3,6 +3,9 @@
 const send = require("koa-send");
 
 module.exports = function serve(path, root) {
+    // remove / begin
+    path = path.replace(/^\/+/, "");
+
     return function(ctx, next) {
         if(ctx.method == "HEAD" || ctx.method == "GET") {
 

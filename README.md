@@ -20,7 +20,7 @@ import serve from "koa-static2";
 
 const app = new Koa();
 
-app.use(serve("static", "./assets"));
+app.use(serve("static", __dirname + "/assets"));
 ```
 ## License
 
