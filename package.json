@@ -1,6 +1,6 @@
 {
   "name": "koa-static2",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Middleware for Koa@2 to serve a folder under a name declared by user",
   "main": "dist/index.js",
   "scripts": {
