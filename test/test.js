@@ -15,4 +15,12 @@ describe("Koa-static2", () => {
             .expect(200, "text content\n", done)
     });
 
+    it("should work when serve the root path", done => {
+        const app = new Koa();
+        app.use(serve("/", __dirname));
+
+        request(app.listen())
+            .get("/some.txt")
+            .expect(200, "text content\n", done)
+    });
 });
