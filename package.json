@@ -1,8 +1,8 @@
 {
   "name": "koa-static2",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Middleware for Koa@2 to serve a folder under a name declared by user",
-  "main": "dist/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-register --require babel-polyfill"
   },
