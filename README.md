@@ -4,7 +4,7 @@
 [![Build Status][travis-image]][travis-url]
 [![Downloads][downloads-image]][downloads-url]
 
-Middleware for Koa2 to serve a folder under a name declared by user
+Middleware for [Koa2](https://github.com/koajs/koa/tree/v2.x) to serve a folder under a name declared by user
 
 ## Install
 
