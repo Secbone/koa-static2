@@ -2,27 +2,23 @@
 
 const send = require("koa-send");
 
-module.exports = function serve(path, root) {
-    // remove / begin
-    path = path.replace(/^\/+/, "");
+module.exports = function serve(pathname, root) {
+    let reg;
+
+    if(typeof pathname === "string") {
+        // format path for regexp
+        if(pathname.charAt(0) != "/") pathname = "/" + pathname;
+        if(pathname.charAt(pathname.length - 1) != "/") pathname += "/";
+        reg = new Regexp("^" + pathname);
+    } else if(typeof pathname.test === "function") {
+        reg = pathname;
+    } else {
+        throw("pathname should be a string or regexp!");
+    }
 
     return function(ctx, next) {
         if(ctx.method == "HEAD" || ctx.method == "GET") {
-
-            let req_path_array = ctx.path.slice(1).split("/");
-
-            // match path
-            if(path.length == 0 || path == req_path_array[0]) {
-                // if not serve the root
-                // then remove the filtered folder from path
-                if(path.length != 0) {
-                    req_path_array = req_path_array.slice(1);
-                }
-
-                return send(ctx, req_path_array.join("/"), {root: root}).then(() => {
-                    return next();
-                });
-            }
+            // TODO: replace path and send
         }
 
         return next();

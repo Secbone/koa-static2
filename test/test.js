@@ -18,6 +18,20 @@ describe("Koa-static2", () => {
     it("should work when serve the root path", done => {
         const app = new Koa();
         app.use(serve("/", __dirname));
+        app.use(function(ctx, next) {
+            if(ctx.path == "/"){
+                ctx.body = "ok";
+            }
+        });
+
+        request(app.listen())
+            .get("/")
+            .expect(200, "ok", done)
+    });
+
+    it("should work when serve the root path and get correct content", done => {
+        const app = new Koa();
+        app.use(serve("/", __dirname));
 
         request(app.listen())
             .get("/some.txt")
