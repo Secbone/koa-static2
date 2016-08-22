@@ -19,7 +19,7 @@ module.exports = function serve(path, root) {
                     req_path_array = req_path_array.slice(1);
                 }
 
-                return send(ctx, req_path_array.join("/"), {root: root}).then(() => {
+                return send(ctx, req_path_array.join("/") || "/", {root: root}).then(() => {
                     return next();
                 });
             }
